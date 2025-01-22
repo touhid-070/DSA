@@ -1,0 +1,79 @@
+1. Ques: How can you output “Physics”and  “Wallah” in two different lines in C++?
+
+=>       #include <iostream>
+         using namespace std;
+         int main() {
+         cout << "Physics\n"; // Using \n
+         cout << "Wallah\n";  // Using \n
+         return 0;
+         }   
+
+2. Ques: Print 10 using 2 positive numbers less than 6  in C++ as output.
+    =>   #include <iostream>
+         using namespace std;
+         int main() {
+              int num1 = 5;
+              int num2 = 5;
+              int result = num1 + num 2;
+              cout<<result;
+              return 0; 
+         }
+  
+3. Ques: How much space does following data types take ?
+
+int
+bool
+float
+
+=>  #include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Size of int: " << sizeof(int) << " bytes" << endl;
+    cout << "Size of bool: " << sizeof(bool) << " byte" << endl;
+    cout << "Size of float: " << sizeof(float) << " bytes" << endl;
+    return 0;
+}
+
+
+4.Ques: What is the output of this program?
+void main(){
+	int a=4;
+int b=5;
+a++;b--;
+cout<<++a<<” “<<b–-;
+}
+
+=>  6 4
+
+5. Ques: WAP to find the circumference of a circle with radius 10 in C++.
+
+=>  #include <iostream>
+     using namespace std;
+
+    int main() {
+    double radius = 10.0;
+    double pi = 3.142;  
+    double circumference = 2 * pi * radius;
+
+    cout << "Circumference of the circle with radius " << radius << " is: " << circumference << endl;
+    return 0;
+}
+
+
+6. Ques: How many of these can be a variable name?
+
+  01PWskills
+
+ _FLOAT
+
+ int
+
+ FLOAT
+
+ You will succeed 
+
+
+
+=> FLOAT , _FLOAT
+
