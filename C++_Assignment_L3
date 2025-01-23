@@ -1,0 +1,194 @@
+1. Take 2 integers input and print the greatest of them.
+=> 
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout<<"Enter the first number : ";
+    cin>>n;
+    int m;
+    cout<<"Enter the second number : ";
+    cin>>m;
+    if(n>m){
+        cout<<n<<" is greater";
+    }
+    else{
+        cout<<m<<" is greater";
+    }
+    return 0;
+}
+
+2. Ques : Given the radius of the circle predict whether numerically area of this circle is larger than the circumference or not.
+=>#include <iostream>
+using namespace std;
+int main() {
+    const float PI = 3.14159f;
+    float radius;
+    cout << "Enter the radius of the circle: ";
+    cin >> radius;
+    float area = PI * radius * radius;
+    float circumference = 2 * PI * radius;
+    cout << "Area: " << area << endl;
+    cout << "Circumference: " << circumference << endl;
+    if (area > circumference) {
+        cout << "The area of the circle is larger than the circumference." << endl;
+    } else {
+        cout << "The circumference of the circle is larger than the area." << endl;
+    }
+    return 0;
+}
+
+3. Ques : Any year is input through the keyboard. Write a program to determine whether the year is a leap year or not. (Considering leap year occurs after every 4 years)
+=> #include <iostream>
+using namespace std;
+int main() {
+    int year;
+    cout << "Enter a year: ";
+    cin >> year;
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                cout << year << " is a leap year." << endl;
+            } else {
+                cout << year << " is not a leap year." << endl;
+            }
+        } else {
+            cout << year << " is a leap year." << endl;
+        }
+    } else {
+        cout << year << " is not a leap year." << endl;
+    }
+    return 0;
+}
+
+4. Ques : Given the length and breadth of a rectangle, write a program to find whether numerically the area of the rectangle is greater than its perimeter.
+=> #include <iostream>
+using namespace std;
+int main() {
+    float length, breadth, area, perimeter;
+    cout << "Enter the length of the rectangle: ";
+    cin >> length;
+    cout << "Enter the breadth of the rectangle: ";
+    cin >> breadth;
+    area = length * breadth;
+    perimeter = 2 * (length + breadth);  
+    if (area > perimeter) {
+        cout << "The area of the rectangle (" << area << ") is greater than its perimeter (" << perimeter << ")." << endl;
+    } else {
+        cout << "The area of the rectangle (" << area << ") is not greater than its perimeter (" << perimeter << ")." << endl;
+    }
+    return 0;
+}
+
+5. Ques : Write a program to input sides of a triangle and check whether a triangle is equilateral, scalene or isosceles triangle.
+=> #include <iostream>
+using namespace std;
+int main() {
+    float side1, side2, side3;
+    cout << "Enter the first side of the triangle: ";
+    cin >> side1;
+    cout << "Enter the second side of the triangle: ";
+    cin >> side2;
+    cout << "Enter the third side of the triangle: ";
+    cin >> side3;
+    if (side1 == side2 && side2 == side3) {
+        cout << "The triangle is an Equilateral triangle." << endl;
+    } else if (side1 == side2 || side2 == side3 || side1 == side3) {
+        cout << "The triangle is an Isosceles triangle." << endl;
+    } else {
+        cout << "The triangle is a Scalene triangle." << endl;
+    }
+    return 0;
+}
+
+6. Ques : If the marks of A, B and C are input through the keyboard, write a program to determine the student scoring least marks. 
+=> #include <iostream>
+using namespace std;
+int main() {
+    float marksA, marksB, marksC;
+    cout << "Enter the marks of student A: ";
+    cin >> marksA;
+    cout << "Enter the marks of student B: ";
+    cin >> marksB;
+    cout << "Enter the marks of student C: ";
+    cin >> marksC;
+    if (marksA <= marksB && marksA <= marksC) {
+        cout << "Student A scored the least marks: " << marksA << endl;
+    } else if (marksB <= marksA && marksB <= marksC) {
+        cout << "Student B scored the least marks: " << marksB << endl;
+    } else {
+        cout << "Student C scored the least marks: " << marksC << endl;
+    }
+    return 0;
+}
+
+7. Ques : Given a point (x, y), write a program to find out if it lies on the x-axis, y-axis or at the origin, viz. (0, 0). 
+=> #include <iostream>
+using namespace std;
+int main() {
+    float x, y;
+    cout << "Enter the x-coordinate of the point: ";
+    cin >> x;
+    cout << "Enter the y-coordinate of the point: ";
+    cin >> y;
+    if (x == 0 && y == 0) {
+        cout << "The point lies at the origin (0, 0)." << endl;
+    } else if (x == 0) {
+        cout << "The point lies on the y-axis." << endl;
+    } else if (y == 0) {
+        cout << "The point lies on the x-axis." << endl;
+    } else {
+        cout << "The point does not lie on the x-axis, y-axis, or at the origin." << endl;
+    }
+    return 0;
+}
+
+8. Ques : Given three points (x1, y1), (x2, y2) and (x3, y3), write a program to check if all the three points fall on one straight line.
+=> #include <iostream>
+using namespace std;
+int main() {
+    float x1, y1, x2, y2, x3, y3;
+    cout << "Enter the coordinates of the first point (x1, y1): ";
+    cin >> x1 >> y1;
+    cout << "Enter the coordinates of the second point (x2, y2): ";
+    cin >> x2 >> y2;
+    cout << "Enter the coordinates of the third point (x3, y3): ";
+    cin >> x3 >> y3;
+    if ((y2 - y1) * (x3 - x2) == (y3 - y2) * (x2 - x1)) {
+        cout << "The three points lie on the same straight line." << endl;
+    } else {
+        cout << "The three points do not lie on the same straight line." << endl;
+    }
+    return 0;
+}
+
+9. Ques : Write a C++ program to input any character and check whether it is the alphabet, digit or special character.
+=> #include <iostream>
+using namespace std;
+int main() {
+    char ch;
+    cout << "Enter any character: ";
+    cin >> ch;
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+        cout << "The character '" << ch << "' is an alphabet." << endl;
+    } else if (ch >= '0' && ch <= '9') {
+        cout << "The character '" << ch << "' is a digit." << endl;
+    } else {
+        cout << "The character '" << ch << "' is a special character." << endl;
+    }
+    return 0;
+}
+
+10. Predict the output
+int main() { 
+int a = 500, b, c ; 
+if ( a >= 400 ) 
+b = 300 ; 
+c = 200 ; 
+cout << "value of b and c are respectively “ <<b<<” and ” << c  ; 
+	return 0;
+}
+
+=> ERROR
+
+
