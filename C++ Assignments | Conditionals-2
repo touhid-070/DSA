@@ -1,0 +1,106 @@
+1. Write a program to count the minimum number of notes in a given amount using the switch statement.
+Input 1: 510
+
+  => #include <iostream>
+using namespace std;
+void countNotes(int amount) {
+    int notes[] = {2000, 500, 100, 50, 20, 10, 5, 2, 1};
+    for (int i = 0; i < 9; i++) {
+        if (amount >= notes[i]) {
+            int count = amount / notes[i];
+            amount = amount % notes[i];
+            switch (notes[i]) {
+                case 2000: cout << "2000: " << count << endl; break;
+                case 500: cout << "500: " << count << endl; break;
+                case 100: cout << "100: " << count << endl; break;
+                case 50: cout << "50: " << count << endl; break;
+                case 20: cout << "20: " << count << endl; break;
+                case 10: cout << "10: " << count << endl; break;
+                case 5: cout << "5: " << count << endl; break;
+                case 2: cout << "2: " << count << endl; break;
+                case 1: cout << "1: " << count << endl; break;
+            }
+        }
+    }
+}
+
+int main() {
+    int amount;
+    cout << "Enter the amount: ";
+    cin >> amount;
+    countNotes(amount);
+    return 0;
+}
+
+2. Predict the output:
+#include<iostream>
+using namespace std;
+int main( ) {
+int a = 5, b, c ;
+b = a = 15 ;
+c = a < 15 ;
+cout << "a = " << a << ", b = " << b << " , c = "<< c ;
+return 0;
+}
+
+=> a = 15, b = 15 , c = 0
+
+3. Predict the output:
+#include<iostream>
+using namespace std;
+int main() {
+int x = 3 ;
+float y = 3.0 ;
+if (x == y)
+cout <<"x and y are equal" ;
+else
+cout << "x and y are not equal" ;
+return 0;
+}
+
+=> x and y are equal
+
+
+4. predict the output:
+
+#include<iostream>
+using namespace std;
+int main(){
+int test = 0;
+cout << "First character " << '1' << endl;
+cout << "Second character " << (test ? 3 : '1') << endl;
+return 0;
+}
+
+ => First character 1
+Second character 1
+
+
+5. predict the output:
+#include <iostream>
+using namespace std;
+int main(){
+int a = 18; int b = 12;
+bool t = (a > 20 && b < 15)? true : false;
+cout <<"Value of t: " << t ;
+return 0;
+}
+
+=> Value of t: 0
+
+  
+6. predict the output:
+
+#include <iostream>
+using namespace std;
+int main() {
+int number = -4;
+char result;
+result = number > 0 ? 'P' : 'N';
+cout << result << endl;
+return 0;
+}
+
+=> N
+                  
+                  
